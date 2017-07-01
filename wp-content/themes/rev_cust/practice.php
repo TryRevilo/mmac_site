@@ -46,6 +46,7 @@ if ( $_GET["page"] ) {
 		</div>
 
 		<!-- INNER CONTENT -->
+		<?php include($site_root . '/pages/page.php'); ?>
 		<?php include($site_root . '/pages/inner_content.php'); ?>
 
 

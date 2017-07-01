@@ -1,4 +1,5 @@
-<?php include(dirname(__FILE__) . '/practice_areas_images.php'); ?>
+
+<?php include('practice_areas_images.php'); ?>
 
 <div class="inner-content">
 	<div class="container">
