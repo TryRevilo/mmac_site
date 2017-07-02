@@ -1,4 +1,3 @@
-
 <?php include('practice_areas_images.php'); ?>
 
 <div class="inner-content">

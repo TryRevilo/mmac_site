@@ -114,7 +114,7 @@ require_once(get_stylesheet_directory() . '/wp-bootstrap-navwalker-master/wp-boo
  }
 
  function doAttachScripts($scripts) {
-   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+   wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
    foreach ($scripts as $key => $child_array) {
     if (is_array($child_array)) {
      $script = $child_array['script'];

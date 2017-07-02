@@ -20,6 +20,3 @@ include($site_root . '/pages/' . $page . '/definitions.php');
     ============================================= -->
     <!-- jQuery -->
     <?php include($site_root . "/js_includes.php"); ?>
-
-</body>
-</html>
