@@ -1,7 +1,4 @@
 <style type="text/css">
-  .inner-content {
-    padding: 30px 0;
-  }
 
   #header-main {
     position: fixed !important;

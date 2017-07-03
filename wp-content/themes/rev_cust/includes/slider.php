@@ -28,7 +28,7 @@ $images_path = get_stylesheet_directory_uri() . "/images/";
       <?= localize('tag_line');?>
     </div>
     <div style="float:left; margin-right:20px;">
-      <a href="<?=$base_url; ?>/pages/page.php?page=about_us" class="pull-left tp-caption lfb tp-resizeme rs-parallaxlevel-0"
+      <a href="<?=get_site_url(); ?>/practice?page=about_us&view=rev_single_column" class="pull-left tp-caption lfb tp-resizeme rs-parallaxlevel-0"
         data-x="380"
         data-y="400"
         data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -52,7 +52,7 @@ $images_path = get_stylesheet_directory_uri() . "/images/";
         display: table;
         transition: .4s;
         ;">EXPLORE</a>
-        <a href="<?=$base_url; ?>/pages/page.php?page=contact_us" class="tp-caption lfb tp-resizeme rs-parallaxlevel-0"
+        <a href="<?=get_site_url(); ?>/practice?page=contact_us" class="tp-caption lfb tp-resizeme rs-parallaxlevel-0"
           data-x="550"
           data-y="400"
           data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -104,7 +104,7 @@ $images_path = get_stylesheet_directory_uri() . "/images/";
     >
     We Get It Done
   </div>
-  <a href="<?=$base_url; ?>/pages/page.php?page=about_us" class="pull-left tp-caption lfb tp-resizeme rs-parallaxlevel-0"
+  <a href="<?=get_site_url(); ?>/practice?page=about_us" class="pull-left tp-caption lfb tp-resizeme rs-parallaxlevel-0"
     data-x="380"
     data-y="400"
     data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -128,7 +128,7 @@ $images_path = get_stylesheet_directory_uri() . "/images/";
     display: table;
     transition: .4s;
     ;">EXPLORE</a>
-    <a href="<?=$base_url; ?>/pages/page.php?page=contact_us" class="tp-caption lfb tp-resizeme rs-parallaxlevel-0"
+    <a href="<?=get_site_url(); ?>/practice?page=contact_us" class="tp-caption lfb tp-resizeme rs-parallaxlevel-0"
       data-x="550"
       data-y="400"
       data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"

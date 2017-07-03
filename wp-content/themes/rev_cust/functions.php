@@ -92,11 +92,9 @@ require_once(get_stylesheet_directory() . '/wp-bootstrap-navwalker-master/wp-boo
            continue;
 
          require_once( ABSPATH . '/wp-admin/includes/file.php' );
-         $pages_base = get_home_path();
-         $server_pages_base = get_site_url();
+         $pages_base = get_stylesheet_directory();
+         $server_pages_base = get_stylesheet_directory_uri();
 
-         $pages_base = "/var/www/html/projects/wordpress_projects/ca";
-         $server_pages_base = "http://localhost/projects/wordpress_projects/ca";
          $url = str_replace($pages_base, $server_pages_base, $path);
 
          $array_item = array('script' => $file_parts, 'handle' => $file_name, 'src' => $url);
@@ -191,7 +189,8 @@ require_once(get_stylesheet_directory() . '/wp-bootstrap-navwalker-master/wp-boo
   </li>';
 
     // add the home link to the end of the menu
-  $items .= '<li class="page-scroll"><a href="<?=$base_url; ?>/pages/page.php?page=about_us">About Us</a></li>';
+  $site_url = get_site_url();
+  $items .= '<li class="page-scroll"><a href="'. $site_url . '/practice?page=about_us&view=rev_single_column">About Us</a></li>';
   $items .= '<li class="page-scroll"><a href="<?=$base_url; ?>/pages/page.php?page=our_people">Our People</a></li>';
   $items .= '<li class="page-scroll"><a href="<?=$base_url; ?>/pages/page.php?page=blog_latest">Blog</a></li>';
   $items .= '<li class="page-scroll"><a href="<?=$base_url; ?>/pages/page.php?page=contact_us">Contact</a></li>';

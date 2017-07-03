@@ -3,57 +3,40 @@
 <?php
 
 get_header(); 
+$page = $_GET['page'];
 
 $site_root = get_stylesheet_directory();
+$content_type = '';
 
-if ( $_GET["page"] ) {
+include($site_root . '/pages/' . $page . '/definitions.php');
+include($site_root . "/pages/page.php");
+
+if ( isset ( $_GET[ "view" ] )) {
+	$view = $_GET[ 'view' ];
+
+	switch ( $view ) {
+		case 'rev_single_column':
+		$content_type = 'inner_content_single.php';
+		break;
+		
+		default:
+		$content_type = 'inner_content_double.php';
+		break;
+	}
+} else {
+	$content_type = 'inner_content_double.php';
 	$page = $_GET["page"];
-	include($site_root . "/pages/page.php");
 }
+
+include( $site_root . '/pages/rev_column_content.php' );
+
+get_footer(); 
 
 ?>
 
-<div class="outer-wrapper" id="page-top">
-	<div class="header-wrap">
+<!-- STYLE SWITCHER  ============================================= -->
+<?php include($site_root . "/style_switcher.php"); ?>
+<!-- END STYLE SWITCHER ============================================= -->
 
-		<!-- PAGE HEADER -->
-		<div class="page_header">
-			<div class="page_header_parallax">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<h3>
-								<span>Portfolio : <?= $rev_args['page_title']; ?></span>
-								<?= $rev_args['page_sub_title']; ?>
-							</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="bcrumb-wrap">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<ul class="bcrumbs">
-								<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-								<li>Portfolio - <?= $rev_args['page_sub_title']; ?></li>
-							</ul>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- INNER CONTENT -->
-		<?php include($site_root . '/pages/page.php'); ?>
-		<?php include($site_root . '/pages/inner_content.php'); ?>
-
-
-		<!-- RECENT PROJECTS -->
-		<?php include($site_root . "/includes/recent_projects.php"); ?>
-		<div class="clearfix space30"></div>
-	</div>
-
-	<?php
-	get_footer(); 
+<!-- jQuery -->
+<?php include($site_root . "/js_includes.php"); ?>
